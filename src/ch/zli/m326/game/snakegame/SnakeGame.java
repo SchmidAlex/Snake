@@ -1,5 +1,6 @@
 package ch.zli.m326.game.snakegame;
 
+import java.awt.Font;
 import java.awt.Graphics2D;
 
 import javax.swing.JPanel;
@@ -109,15 +110,20 @@ public class SnakeGame extends Game {
      */
     @Override
     public void drawStatus(JPanel panel, Graphics2D g) {
+
+        int fontSize = panel.getHeight() / 16;
+
+        g.setFont(new Font("myFont", 1, fontSize));
+
         g.drawString(
-            gamePaused ? "Game Paused" : "Game Running", 20, 20);
+            gamePaused ? "Game Paused" : "Game Running", 20, 20 + fontSize);
         if (gameOver) {
-            g.drawString("Game Over", 20, 40);
+            g.drawString("Game Over", 20, 40 + 3 * fontSize);
         }
 
-        g.drawString("Level: " + snakeGameLogic.getLevelHeight(), 20, 60);
+        g.drawString("Level: " + snakeGameLogic.getLevelHeight(), 20, 60 + 5 * fontSize);
 
-        g.drawString("Your score: " + snakeGameLogic.getPoints(), 20, 80);
+        g.drawString("Your score: " + snakeGameLogic.getPoints(), 20, 80 + 7 * fontSize);
     }
 
     /**
