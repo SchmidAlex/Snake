@@ -6,5 +6,10 @@
 
    Every levelup the game will be faster for 30ms and there will be 1 more obstacle random in the field and 1 more food (except from level 1 to 2).
 
+   Every game and levelup starts in pause. Press "P" or "p" to get out of the pause-mode.
+   If you want to pause a game also press "P" or "p".
+
+   If you have an gameover and want to go on playing, press "N" or "n" to start a new game.
+
 # Create new levels or a new game
    If you want you can use the hole project and create a new game like pacman in it. Just make a new package in the game-package and copy the things of the package "examplegame" in it. After it i would rename it (see in package snakegame).

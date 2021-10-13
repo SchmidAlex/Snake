@@ -18,12 +18,13 @@ public class Food {
 
     /**
      * Draws the food as a red rectangel
-     * @param panel is the panel to paint on
-     * @param g is the graphics2D
+     * @param g is the graphics2D to paint
+     * @param square is the width of a square in the panel
+     * @param offset is the amount of pixel we have left after all squares
      */
-    public void draw(Graphics2D g, int square){
+    public void draw(Graphics2D g, int square, int offset){
         g.setColor(Color.RED);
-        g.fillRect(position.getX() * square + 2, position.getY() * square + 2, square - 4, square - 4);
+        g.fillRect(position.getX() * square + 2 + (offset / 2), position.getY() * square + 2 + (offset / 2), square - 4, square - 4);
     }
 
     /**

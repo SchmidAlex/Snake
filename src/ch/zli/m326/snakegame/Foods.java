@@ -30,13 +30,14 @@ public class Foods {
     }
 
      /**
-     * Draws every single food
-     * @param panel is the panel to paint on
-     * @param g is the graphics2D
-     */
-    public void draw(Graphics2D g, int square) {
+      * Draws every single food
+      * @param g is the graphics2D to paint
+      * @param square is the width of a square in the panel
+      * @param offset is the amount of pixel we have left after all squares
+      */
+    public void draw(Graphics2D g, int square, int offset) {
         for (Food food : foodList) {
-            food.draw(g, square);
+            food.draw(g, square, offset);
         }
     }
 

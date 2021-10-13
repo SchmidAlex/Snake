@@ -45,10 +45,11 @@ public class Level {
      */
     public void draw(JPanel panel, Graphics2D g){
         int squareWidth = panel.getWidth() / 11;
+        int offset = panel.getWidth() % squareWidth;
         desert.draw(panel, g);
-        snake.draw(g, squareWidth);
-        obstacles.draw(g, squareWidth);
-        foods.draw(g, squareWidth);
+        snake.draw(g, squareWidth, offset);
+        obstacles.draw(g, squareWidth, offset);
+        foods.draw(g, squareWidth, offset);
     }
     
     /**

@@ -31,20 +31,21 @@ public class Snake {
 
     /**
      * Draws the snake with a blue head and green body
-     * @param panel is the panel to paint on
-     * @param g is the graphics2D
+     * @param g is the graphics2D to paint
+     * @param square is the width of a square in the panel
+     * @param offset is the amount of pixel we have left after all squares
      */
-    public void draw(Graphics2D g, int square){
+    public void draw(Graphics2D g, int square, int offset){
         g.setColor(Color.GREEN);
 
         for (Coord bodypart : snakePos) {
             if (bodypart != this.snakePos.get(0)) {
-                g.fillArc(bodypart.getX() * square, bodypart.getY() * square, square, square, square, 360);
+                g.fillArc(bodypart.getX() * square + (offset / 2), bodypart.getY() * square + (offset / 2), square, square, square, 360);
             }
         }
 
         g.setColor(Color.BLUE);
-        g.fillArc(this.snakePos.get(0).getX() * square, this.snakePos.get(0).getY() * square, square, square, 0, 270);
+        g.fillArc(this.snakePos.get(0).getX() * square + (offset / 2), this.snakePos.get(0).getY() * square + (offset / 2), square, square, 0, 270);
     }
 
     /**
