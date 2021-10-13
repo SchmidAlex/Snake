@@ -34,9 +34,9 @@ public class Foods {
      * @param panel is the panel to paint on
      * @param g is the graphics2D
      */
-    public void draw(Graphics2D g) {
+    public void draw(Graphics2D g, int square) {
         for (Food food : foodList) {
-            food.draw(g);
+            food.draw(g, square);
         }
     }
 

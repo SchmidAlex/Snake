@@ -58,10 +58,10 @@ public class Obstacles {
      * @param panel is the panel to paint on
      * @param g is the graphics2D
      */
-    public void draw(Graphics2D g){
+    public void draw(Graphics2D g, int square){
         g.setColor(Color.BLACK);
         for (Coord obstacle : obstaclesPos) {
-            g.fillRect(obstacle.getX() * 20 + 5, obstacle.getY() * 20 + 5, 10, 10);
+            g.fillRect(obstacle.getX() * square + 5, obstacle.getY() * square + 5, square - 10, square - 10);
         }
     }
 

@@ -34,17 +34,17 @@ public class Snake {
      * @param panel is the panel to paint on
      * @param g is the graphics2D
      */
-    public void draw(Graphics2D g){
+    public void draw(Graphics2D g, int square){
         g.setColor(Color.GREEN);
 
         for (Coord bodypart : snakePos) {
             if (bodypart != this.snakePos.get(0)) {
-                g.fillArc(bodypart.getX() * 20, bodypart.getY() * 20, 20, 20, 20, 360);
+                g.fillArc(bodypart.getX() * square, bodypart.getY() * square, square, square, square, 360);
             }
         }
 
         g.setColor(Color.BLUE);
-        g.fillArc(this.snakePos.get(0).getX() * 20, this.snakePos.get(0).getY() * 20, 20, 20, 0, 270);
+        g.fillArc(this.snakePos.get(0).getX() * square, this.snakePos.get(0).getY() * square, square, square, 0, 270);
     }
 
     /**

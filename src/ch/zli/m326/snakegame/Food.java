@@ -21,9 +21,9 @@ public class Food {
      * @param panel is the panel to paint on
      * @param g is the graphics2D
      */
-    public void draw(Graphics2D g){
+    public void draw(Graphics2D g, int square){
         g.setColor(Color.RED);
-        g.fillRect(position.getX() * 20 + 2, position.getY() * 20 + 2, 15, 15);
+        g.fillRect(position.getX() * square + 2, position.getY() * square + 2, square - 4, square - 4);
     }
 
     /**
