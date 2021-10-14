@@ -15,7 +15,6 @@ public class SnakeTest {
 
     @Test
     public void getSnakeHeadPosTest() {
-        snake.getSnakeHeadPos();
         assertEquals(new Coord(5, 5), snake.getSnakeHeadPos());
     }
 
@@ -49,6 +48,6 @@ public class SnakeTest {
     @Test
     public void selfColissionTest(){
         snake.move(new Coord(5, 4));
-        assertEquals(true, snake.selfColission());
+        assertTrue(snake.selfColission());
     }
 }
